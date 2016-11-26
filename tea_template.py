@@ -9,7 +9,7 @@ time = 0
 class tea_template:
     def __init__(self, avans, mes):
         self.avans = 0
-        self.mes = ' '
+        self.mes = 'Внесите аванс'
 
     def put(self, money):
         self.avans += money
