@@ -103,7 +103,6 @@ frame.add_label("Налить:", 200)
 frame.add_button("Чай (3 руб.)", get_tea)
 frame.add_button("Чай c лимоном (4 руб.)", get_tea_lemon)
 timer = simplegui.create_timer(1000, tick)
-timer.start()
 frame.set_canvas_background("White")
 
 frame.set_draw_handler(draw)
