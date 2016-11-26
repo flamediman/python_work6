@@ -16,7 +16,7 @@ class tea_template:
 
     def choice(self, lemon):
         global change
-        if not lemon:
+        if lemon:
             if self.avans >= 4:
                 self.mes = 'Ваш чай готов'
                 self.avans -= 4
@@ -31,7 +31,7 @@ class tea_template:
                 change = 0
                 timer.start()
 
-        if lemon:
+        if not lemon:
             if self.avans >= 3:
                 self.mes = 'Ваш чай готов'
                 self.avans -= 3
@@ -70,11 +70,11 @@ def put5():
 
 def get_tea():
     global change
-    me.choice(True)
+    me.choice(False)
 
 def get_tea_lemon():
     global change
-    me.choice(False)
+    me.choice(True)
 
 def tick():
     global time
