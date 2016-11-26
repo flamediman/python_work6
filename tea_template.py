@@ -91,20 +91,21 @@ def draw(canvas):
     if change > 0:
         canvas.draw_text("Сдача : "+str(change)+" руб.", [10, 3 * HEIGHT / 4], 18, 'Black')
 
+me = tea_template(0, ' ')
 
 frame = simplegui.create_frame("Чайный автомат", WIDTH, HEIGHT, 200)
 frame.add_label("Опущены:", 200)
 frame.add_button("1 руб.", put1)
 frame.add_button("2 руб.", put2)
 frame.add_button("5 руб.", put5)
-me = tea_template(0, ' ')
+
 frame.add_label("", 200)
 frame.add_label("Налить:", 200)
 frame.add_button("Чай (3 руб.)", get_tea)
 frame.add_button("Чай c лимоном (4 руб.)", get_tea_lemon)
+
 timer = simplegui.create_timer(1000, tick)
 frame.set_canvas_background("White")
-
 frame.set_draw_handler(draw)
 
 frame.start()
